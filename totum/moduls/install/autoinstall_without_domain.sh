@@ -30,7 +30,7 @@ then
   echo
   echo -e "\e[40;1;37mTHIS SERVER HAVE NOT \e[40;1;31men_US.UTF-8\e[40;1;37m LOCALE. YOU HAVE TO EXECUTE:"
   echo
-  echo -e "sudo curl -O https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/setlocale.sh && sudo bash setlocale.sh" 
+  echo -e "sudo curl -O https://raw.githubusercontent.com/ivev7/totum-mit/master/totum/moduls/install/setlocale.sh && sudo bash setlocale.sh" 
   echo
   echo -e "AND FOLLOW THE ON-SCREEN INSTRUCTIONS TO SETUP THE CORRECT LOCALE\033[0m"
   echo
