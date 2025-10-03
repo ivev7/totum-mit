@@ -243,10 +243,10 @@ sudo timedatectl set-timezone $TOTUMTIMEZONE
 
 # Install PHP
 
-sudo apt -y install php8.0 php8.0-bcmath php8.0-cli php8.0-curl php8.0-fpm php8.0-gd php8.0-mbstring php8.0-opcache php8.0-pgsql php8.0-xml php8.0-zip php8.0-soap php8.0-ldap
+sudo apt -y install php8.1 php8.1-bcmath php8.1-cli php8.1-curl php8.1-fpm php8.1-gd php8.1-mbstring php8.1-opcache php8.1-pgsql php8.1-xml php8.1-zip php8.1-soap php8.1-ldap
 sudo service apache2 stop
 sudo systemctl disable apache2
-sudo curl -O https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/totum_fpm.conf
+sudo curl -O https://raw.githubusercontent.com/ivev7/totum-mit/master/totum/moduls/install/totum_fpm.conf
 sudo chown root:root ./totum_fpm.conf
 sudo mv ./totum_fpm.conf /etc/php/8.0/fpm/pool.d/totum.conf
 sudo sed -i "s:Europe/London:${TOTUMTIMEZONE}:g" /etc/php/8.0/fpm/pool.d/totum.conf
@@ -268,11 +268,11 @@ cd ~
 # Install Nginx
 
 sudo apt -y install nginx
-sudo curl -O https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/totum_nginx.conf
+sudo curl -O https://raw.githubusercontent.com/ivev7/totum-mit/master/totum/moduls/install/totum_nginx.conf
 sudo chown root:root ./totum_nginx.conf
 sudo mv ./totum_nginx.conf /etc/nginx/sites-available/totum.online.conf
 sudo sed -i "s:/var/www/:/home/totum/:g" /etc/nginx/sites-available/totum.online.conf
-sudo curl -O https://raw.githubusercontent.com/totumonline/ttmonline-mit-image/main/certbot/acme
+sudo curl -O https://raw.githubusercontent.com/ivev7/ttmonline-mit-image/main/certbot/acme
 sudo chown root:root ./acme
 sudo mv ./acme /etc/nginx/acme
 sudo mkdir -p /var/www/html/.well-known/acme-challenge
@@ -283,7 +283,7 @@ sudo service nginx restart
 
 # Install Totum from user Totum
 
-sudo -u totum bash -c "git clone https://github.com/totumonline/totum-mit.git /home/totum/totum-mit"
+sudo -u totum bash -c "git clone https://github.com/ivev7/totum-mit.git /home/totum/totum-mit"
 sudo -u totum bash -c "php -r \"copy('https://getcomposer.org/installer', '/home/totum/totum-mit/composer-setup.php');\""
 cd /home/totum/totum-mit
 sudo -u totum bash -c "php /home/totum/totum-mit/composer-setup.php --quiet"
