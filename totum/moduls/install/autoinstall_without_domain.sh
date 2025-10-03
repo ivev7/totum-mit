@@ -42,12 +42,12 @@ fi
 if [[ $TOTUMLOCALE = "A" ]]
 then
 echo
-sudo curl -O https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/setlocale.sh && sudo bash setlocale.sh
+sudo curl -O https://raw.githubusercontent.com/ivev7/totum-mit/master/totum/moduls/install/setlocale.sh && sudo bash setlocale.sh
 echo
 elif [[ $TOTUMLOCALE = "a" ]]
 then
 echo
-sudo curl -O https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/setlocale.sh && sudo bash setlocale.sh
+sudo curl -O https://raw.githubusercontent.com/ivev7/totum-mit/master/totum/moduls/install/setlocale.sh && sudo bash setlocale.sh
 echo
 elif [[ $TOTUMLOCALE = "RUN" ]]
 then
