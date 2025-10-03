@@ -1,5 +1,5 @@
 {
-  "name": "totumonline/totum-mit",
+  "name": "ivev7/totum-mit",
   "description": "CRM, ERP and custom constructor",
   "type": "project",
   "require": {
@@ -24,7 +24,7 @@
   "repositories": [
     {
       "type": "github",
-      "url": "https://github.com/totumonline/totum-front/"
+      "url": "https://github.com/ivev7/totum-front/"
     }
   ],
   "require-dev": {
@@ -56,6 +56,6 @@
   },
   "scripts": {
     "dev-run": "php -S localhost:8080 -t http/",
-    "dev-front-run": "php -S localhost:8080 -t vendor/totumonline/totum-front/http/"
+    "dev-front-run": "php -S localhost:8080 -t vendor/ivev7/totum-front/http/"
   }
 }
