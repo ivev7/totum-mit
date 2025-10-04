@@ -248,13 +248,13 @@ sudo service apache2 stop
 sudo systemctl disable apache2
 sudo curl -O https://raw.githubusercontent.com/ivev7/totum-mit/master/totum/moduls/install/totum_fpm.conf
 sudo chown root:root ./totum_fpm.conf
-sudo mv ./totum_fpm.conf /etc/php/8.0/fpm/pool.d/totum.conf
-sudo sed -i "s:Europe/London:${TOTUMTIMEZONE}:g" /etc/php/8.0/fpm/pool.d/totum.conf
+sudo mv ./totum_fpm.conf /etc/php/8.1/fpm/pool.d/totum.conf
+sudo sed -i "s:Europe/London:${TOTUMTIMEZONE}:g" /etc/php/8.1/fpm/pool.d/totum.conf
 sudo mkdir /var/lib/php/sessions_totum
 sudo chown root:root /var/lib/php/sessions_totum
 sudo chmod 1733 /var/lib/php/sessions_totum
-sudo rm /etc/php/8.0/fpm/pool.d/www.conf
-sudo service php8.0-fpm restart
+sudo rm /etc/php/8.1/fpm/pool.d/www.conf
+sudo service php8.1-fpm restart
 
 # Install Postgres
 
